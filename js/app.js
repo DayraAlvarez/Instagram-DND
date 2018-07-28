@@ -11,24 +11,15 @@
 
   $(document).ready(function(){
     console.log('Pagina cargada');
-  
-  
+
+
     $("#logout").click(function(){
       console.log('Boton logout clickedo');
       firebase.auth().signOut();
+      window.location = "index.html";
     });
-    
-    firebase.auth().onAuthStateChanged(function(user){
-      console.log("checking login state");
-      if(user) {
-        console.log("logged in");
-        $("#user").text(user.email);
-      } else {
-        console.log("logged out");
-        $("#user").text("");
-        window.location = "index.html";
-      }
-    });
+
+
   });
 
   

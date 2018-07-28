@@ -1,4 +1,37 @@
+html {
+    background: linear-gradient(to bottom left, #99ffcc 0%, #993399 77%);   
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100%;
+    text-align: center;
+    width: 100%;
+}
+
 #navbar {
     height: 20px;
     font-size: 10px;
 }
+
+.fab {
+    color:white;
+    text-decoration: none;
+}
+
+a {
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+footer {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-top: rgba(255, 255, 255, 0.2);
+    bottom: 0;
+    color: white;
+    font-size: 13px;
+    left: 0;
+    padding: 1rem;
+    position: absolute;
+    right: 0;
+    text-align: center;
+  }
