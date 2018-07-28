@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Insta Collage</title>
+    <link rel="icon" href="assets/camera.png"></link>
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/grid.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<select name="" id="languajeSelector">
+    <option value="">Idioma Español (España)</option>
+</select>
+<header>Instagram</header>
+<body>
+    <section >
+        <form id="action">
+            <input id="email" class="signInInput" type="email" value="user" onfocus="this.value=''">
+            <input id="password" class="signInInput" type="password" value="password" onfocus="this.value=''">
+            <button id="login" type="button">Iniciar sesion</button>
+        </form>
+        <div id="help">
+            <p>¿Has olvidado tu informacion de inicio de sesion?
+              <a href="https://help.instagram.com/374546259294234" target="_blank"><strong> Obten ayuda</strong></a>
+            </p>
+            <p>Ó</p>
+            <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-square"></i> Iniciar sesion con Facebook</a>
+        </div>
+    </section>
+    <h1 id="user"></h1>
+    <footer>
+        <p>¿No tienes una cuenta?<a id="signup" href=""><strong> Registrate</p></a>
+    </footer>
+    <script src="https://www.gstatic.com/firebasejs/5.1.0/firebase.js"></script>  
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>
+
