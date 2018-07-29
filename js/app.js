@@ -1,4 +1,4 @@
-  // Initialize Firebase
+// Initialize Firebase
   var config = {
     apiKey: "AIzaSyDsiMT2zTcvyBUL8gTeZRYS6Hy0OYaDQNc",
     authDomain: "insta-demo-dayra.firebaseapp.com",
@@ -10,15 +10,11 @@
   firebase.initializeApp(config);
 
   $(document).ready(function(){
-    console.log('Pagina cargada');
-
 
     $("#logout").click(function(){
-      console.log('Boton logout clickedo');
       firebase.auth().signOut();
       window.location = "index.html";
     });
-
 
   });
 
