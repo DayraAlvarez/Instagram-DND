@@ -45,7 +45,9 @@ a {
     font-size: 13px;
 }
 
-a:hover {
-     color: lightslategray;
-     transition: 0.5s;
+#div1 {
+    width: 350px;
+    height: 70px;
+    padding: 10px;
+    border: 1px solid #aaaaaa;
 }
