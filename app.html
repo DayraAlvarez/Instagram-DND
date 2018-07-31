@@ -16,23 +16,26 @@
         <h1>Drag and drop</h1>
         <a class="navlink" id="logout">Logout</a>
     </header>
-    <section>
-        <ul>
-            <li><img src="assets/5.jpg" alt="demo-img" id="img1"></li>
-            <li><img src="assets/6.gif" alt="demo-img" id="img1"></li>
-            <li><img src="assets/8.gif" alt="demo-img" id="img1"></li>
-            <li><img src="assets/14.gif" alt="demo-img" id="img1"></li>
-            <li><img src="assets/13.gif" alt="demo-img" id="img1"></li>
-            <li><img src="assets/10.gif" alt="demo-img" id="img1"></li>
-        </ul>
+    <section class="container-fluid">
+        <div class="row">
+             <div id="image-container" class="col-12"></div>
+        </div>
     </section>
-    <section>
-        <div id="image-container"></div>
+    <section id="imagesMenu" class="container-fluid">
+        <div class="row">
+            <ul class="col-s12">
+                <li><img src="assets/5.jpg" alt="demo-img" id="img1"></li>
+                <li><img src="assets/6.gif" alt="demo-img" id="img2"></li>
+                <li><img src="assets/8.gif" alt="demo-img" id="img3"></li>
+                <li><img src="assets/14.gif" alt="demo-img" id="img4"></li>
+                <li><img src="assets/13.gif" alt="demo-img" id="img5"></li>
+                <li><img src="assets/10.gif" alt="demo-img" id="img6"></li>
+            </ul>
+        </div>
     </section>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://www.gstatic.com/firebasejs/5.1.0/firebase.js"></script>
-    <script src="js/DragDropTouch.js"></script>       
+    <script src="js/touch.js"></script>
     <script src="js/app.js"></script>
 </body>
 </html>
-
