@@ -37,7 +37,7 @@ function drop(ev) {
  var dropLoc = document.getElementById("image-container");
 
  dragItem.ondragstart = function (evt){
-   evt.dataTransfer.setData("text", evt.target.id);
+   evt.dataTransfer.setData('key', evt.target.id);
  }
 
  dropLoc.ondragover = function (evt){
@@ -45,9 +45,23 @@ function drop(ev) {
  }
 
  dropLoc.ondrop = function (evt){
-   var dropItem = evt.dataTransfer.getData("text")
+   var dropItem = evt.dataTransfer.getData('key')
    evt.preventDefault();
-   var data = event.dataTransfer.getData("text");
-   event.target.appendChild(document.getElementById(data));
+   var myElement = document.getElementById(dropItem);
+   var myNewElement = document.createElement('img');
+   myNewElement.src = myElement.src;
+   dropLoc.appendChild(myNewElement);
  }
 
+ function allowDrop(event) {
+  event.preventDefault();
+}
+
+function drag(event) {
+  event.dataTransfer.setData("text", event.target.id);
+}
+function drop(event) {
+  event.preventDefault();
+  var data = event.dataTransfer.getData("text");
+  event.target.appendChild(document.getElementById(data));
+}
