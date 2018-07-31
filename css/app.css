@@ -26,20 +26,12 @@ h1 {
     left: 105px;
 }
 
-ul {
+#logout {
     width: auto;
-    float: right;
     margin-top: 12px;
     font-family: sans-serif;
-}
-
-li {
-    display: inline-block;
     padding: 15px 30px;
-}
-
-a {
-    text-align: center;
+    float:right;
     color: white;
     text-decoration: none;
     font-size: 13px;
@@ -51,3 +43,25 @@ a {
     padding: 10px;
     border: 1px solid #aaaaaa;
 }
+
+ul {
+    float: left;
+}
+
+img {
+    width:130px;
+    height: 100px;
+}
+
+#image-container {
+    width: 80%;
+    height: 500px;
+    border: 1px solid #000;
+    margin-top: 30px;
+    margin-left: 10em;
+}
+
+div > img {
+    width: 130%;
+    height: 100%;
+}  /*Hacer diferentes cointainers preestablecidos*/

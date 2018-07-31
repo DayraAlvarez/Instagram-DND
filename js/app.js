@@ -32,4 +32,30 @@ function drop(ev) {
     ev.target.appendChild(document.getElementById(data));
 }
 
-alert("Hola");  
+//Drag and drop
+ var dragItem = document.getElementById("img1");
+ var dropLoc = document.getElementById("image-container");
+
+ dragItem.ondragstart = function (evt){
+   evt.dataTransfer.setData('key', evt.target.id);
+   console.log("It´s dragging..")
+ }
+
+
+ dropLoc.ondragover = function (evt){
+   evt.preventDefault();
+   console.log("It's dragover..")
+ }
+
+ dropLoc.ondrop = function (evt){
+   var dropItem = evt.dataTransfer.getData('key')
+   evt.preventDefault();
+   console.log(evt);
+   console.log("It's dropped..")
+   console.log(dropItem);
+   var myElement = document.getElementById(dropItem);
+   console.log(myElement);
+   var myNewElement = document.createElement('img');
+   myNewElement.src = myElement.src;
+   dropLoc.appendChild(myNewElement);
+ }
