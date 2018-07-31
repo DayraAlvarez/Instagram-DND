@@ -11,18 +11,18 @@
 
 $(document).ready(function(){
     console.log('Pagina cargada');
-  
+
     $("#login").click(function(){
       console.log('Boton login clicleado');
       var email = $('#email').val(); //Tomar valor input email
       var password = $('#password').val(); //Tomar valor input password
       console.log(email,password); //Muestra el user y contreña en consola
-      
+
       //Comprobacion email y password
       firebase.auth().signInWithEmailAndPassword(email,password)
       .catch(function(error){
         alert(error.message);
-  
+
       })
     });
     //Signout
@@ -36,14 +36,14 @@ $(document).ready(function(){
       var email = $('#email').val();
       var password = $('#password').val();
       console.log(email,password);
-  
+
       firebase.auth().createUserWithEmailAndPassword(email,password)
       .catch(function(error){
         alert(error.message);
-  
+
       })
     });
-    
+
     firebase.auth().onAuthStateChanged(function(user){
       console.log("checking login state");
       if(user) {
@@ -57,5 +57,3 @@ $(document).ready(function(){
       }
     });
   });
-  
-  
