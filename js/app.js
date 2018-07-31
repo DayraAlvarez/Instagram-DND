@@ -18,7 +18,7 @@
 
   });
 
-  function allowDrop(ev) {
+/*  function allowDrop(ev) {
     ev.preventDefault();
 }
 
@@ -30,8 +30,7 @@ function drop(ev) {
     ev.preventDefault();
     var data = ev.dataTransfer.getData("text");
     ev.target.appendChild(document.getElementById(data));
-}
-
+}*/
 //Drag and drop
  var dragItem = document.getElementById("img1");
  var dropLoc = document.getElementById("image-container");
