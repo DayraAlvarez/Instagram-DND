@@ -51,4 +51,3 @@ function drop(ev) {
    event.target.appendChild(document.getElementById(data));
  }
 
-
