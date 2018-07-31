@@ -61,7 +61,7 @@ img {
     margin-left: 10em;
 }
 
-div > img {
+/*div > img {
     width: 130%;
     height: 100%;
 }  /*Hacer diferentes cointainers preestablecidos*/

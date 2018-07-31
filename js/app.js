@@ -37,25 +37,18 @@ function drop(ev) {
  var dropLoc = document.getElementById("image-container");
 
  dragItem.ondragstart = function (evt){
-   evt.dataTransfer.setData('key', evt.target.id);
-   console.log("It´s dragging..")
+   evt.dataTransfer.setData("text", evt.target.id);
  }
-
 
  dropLoc.ondragover = function (evt){
    evt.preventDefault();
-   console.log("It's dragover..")
  }
 
  dropLoc.ondrop = function (evt){
-   var dropItem = evt.dataTransfer.getData('key')
+   var dropItem = evt.dataTransfer.getData("text")
    evt.preventDefault();
-   console.log(evt);
-   console.log("It's dropped..")
-   console.log(dropItem);
-   var myElement = document.getElementById(dropItem);
-   console.log(myElement);
-   var myNewElement = document.createElement('img');
-   myNewElement.src = myElement.src;
-   dropLoc.appendChild(myNewElement);
+   var data = event.dataTransfer.getData("text");
+   event.target.appendChild(document.getElementById(data));
  }
+
+
