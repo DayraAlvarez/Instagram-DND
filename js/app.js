@@ -18,25 +18,12 @@
 
   });
 
-/*  function allowDrop(ev) {
-    ev.preventDefault();
-}
-
-function drag(ev) {
-    ev.dataTransfer.setData("text", ev.target.id);
-}
-
-function drop(ev) {
-    ev.preventDefault();
-    var data = ev.dataTransfer.getData("text");
-    ev.target.appendChild(document.getElementById(data));
-}*/
 //Drag and drop
- var dragItem = document.getElementById("img1");
+ var dragItem = document.getElementById("imagesMenu");
  var dropLoc = document.getElementById("image-container");
 
  dragItem.ondragstart = function (evt){
-   evt.dataTransfer.setData('key', evt.target.id);
+   evt.dataTransfer.setData("text", evt.target.id);
  }
 
  dropLoc.ondragover = function (evt){
@@ -44,7 +31,7 @@ function drop(ev) {
  }
 
  dropLoc.ondrop = function (evt){
-   var dropItem = evt.dataTransfer.getData('key')
+   var dropItem = evt.dataTransfer.getData("text");
    evt.preventDefault();
    var myElement = document.getElementById(dropItem);
    var myNewElement = document.createElement('img');
@@ -52,15 +39,16 @@ function drop(ev) {
    dropLoc.appendChild(myNewElement);
  }
 
- function allowDrop(event) {
-  event.preventDefault();
-}
+ /*  function allowDrop(ev) {
+     ev.preventDefault();
+ }
 
-function drag(event) {
-  event.dataTransfer.setData("text", event.target.id);
-}
-function drop(event) {
-  event.preventDefault();
-  var data = event.dataTransfer.getData("text");
-  event.target.appendChild(document.getElementById(data));
-}
+ function drag(ev) {
+     ev.dataTransfer.setData("text", ev.target.id);
+ }
+
+ function drop(ev) {
+     ev.preventDefault();
+     var data = ev.dataTransfer.getData("text");
+     ev.target.appendChild(document.getElementById(data));
+ }*/
